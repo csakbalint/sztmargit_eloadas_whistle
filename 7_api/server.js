@@ -13,6 +13,10 @@ const Whistle = db.model('Whistle', new mongoose.Schema({ text: String }));
 
 // router
 const router = new Router();
+router.get('/status', ctx => {
+  ctx.body = { ok: true };
+  ctx.status = 200;
+});
 router.get('/api/whistle', async ctx => {
   const items = await Whistle.find()
     .limit(500)
