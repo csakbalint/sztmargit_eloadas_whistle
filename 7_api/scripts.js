@@ -57,7 +57,7 @@ window.addEventListener('load', function onLoad() {
 
   function saveWhistle(text) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:1337/api/whistle');
+    xhr.open('POST', 'https://whistle-api.csakbalint.me/api/whistle');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
       if (xhr.status !== 200) {
@@ -70,7 +70,7 @@ window.addEventListener('load', function onLoad() {
 
   function getWhistlesFromServer() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:1337/api/whistle');
+    xhr.open('GET', 'https://whistle-api.csakbalint.me/api/whistle');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
       if (xhr.status !== 200) {
