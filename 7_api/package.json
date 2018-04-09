@@ -1,0 +1,25 @@
+{
+  "name": "site_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "db": "yarn mongo:kill && yarn mongo:start",
+    "mongo:start": "docker run -p 27017:27017 -dt mongo",
+    "mongo:kill": "docker ps | grep mongo | awk '{print $1}' | xargs -I {} docker kill {}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "bluebird": "^3.5.1",
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-cors": "0.0.16",
+    "koa-logger": "2",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.0.13"
+  }
+}

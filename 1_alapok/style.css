@@ -1,0 +1,93 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: deepskyblue;
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  display: inline;
+  text-shadow: grey 1px 1px 9px;
+  color: white;
+  padding: 15px;
+  font-size: 34px;
+  letter-spacing: 5px;
+  border-radius: 15px;
+}
+/*******************
+*       Nap        *
+*******************/
+.sun {
+  position: absolute;
+  background: yellow;
+  width: 120px;
+  height: 120px;
+  border-radius: 150px;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
+/*******************
+*      Felhők      *
+*******************/
+.cloud {
+  position: absolute;
+  background: white;
+  width: 175px;
+  height: 60px;
+  border-radius: 100px;
+  z-index: 2;
+}
+.cloud:before,
+.cloud:after {
+  content: '';
+  position: absolute;
+  background: white;
+  z-index: 2;
+}
+.cloud:before {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  right: 25px;
+  border-radius: 200px;
+}
+.cloud:after {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 25px;
+  border-radius: 100px;
+}
+/*******************
+*      Hegyek      *
+*******************/
+.mountains {
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+}
+.mountains:before,
+.mountains:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+.mountains::before {
+  z-index: 1;
+  border: 250px solid transparent;
+  border-bottom: 200px solid #7fa507;
+  left: 160px;
+}
+.mountains:after {
+  z-index: 3;
+  border: 200px solid transparent;
+  border-bottom: 300px solid #95bf13;
+}
